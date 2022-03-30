@@ -1,0 +1,33 @@
+@extends('master')
+@section('content')
+<div class="maincont-middle">
+    <div class="cont-middle">
+        <div class="auth">
+            <div class="titleauth">
+                Регистрация
+            </div>
+            <form method="post" action="{{route('register')}}" class="form_auth">
+                @csrf
+                <div class="pole-for-text">
+                    <input autocomplete="off" id="fist-log" class="auth-log" type="text"required>
+                    <label for="fist-log" class="text-input-auth">Login</label>
+                </div>
+                <div class="pole-for-text">
+                    <input autocomplete="off" id="fist-log" class="auth-log" type="email"required>
+                    <label for="fist-log" class="text-input-auth2">Email</label>
+                </div>
+                <div class="pole-for-text">
+                    <input autocomplete="off" id="two-log" class="auth-log" type="password"required>
+                    <label for="two-log" class="text-input-auth3">Password</label>
+                </div>
+                <div class="pole-for-text">
+                    <input autocomplete="off" id="two-log" class="auth-log" type="password"required>
+                    <label for="two-log" class="text-input-auth4">Password</label>
+                </div>
+                <button type="submit" class="btn-auth">Регистрация</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+@endsection
