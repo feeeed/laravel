@@ -23,6 +23,7 @@ Auth::routes([
 Route::get('/home',[\App\Http\Controllers\HomeController::class,'index'])->name('home');
 Route::get('/logout',[LoginController::class,'logout'])->name('get-logout');
 Route::get('/', [MainController::class,'start'])->name('index');
+Route::get('/about',[App\Http\Controllers\MainController::class, 'aboutus'])->name('aboutus');
 Route::get('/films/{idfilm?}', [MainController::class,'Film'])->name('idfilm');
 Route::get('/auth', [MainController::class,'auth']);
 Route::get('/basket',[BasketController::class,'basket'])->name('basket');
@@ -32,10 +33,3 @@ Route::post('basket/remove/{id}',[BasketController::class,'basketRemove'])->name
 
 Route::get('/categories', [MainController::class,'categories'])->name('categories');
 Route::get('/{category?}', [MainController::class,'category'])->name('category');
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
